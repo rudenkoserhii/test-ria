@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Statistics microservice",
   "main": "server.ts",
-  "type": "module",
   "scripts": {
-    "start": "tsx watch server.ts",
-    "lint": "eslint ./**/*.ts --fix",
+    "dev": "tsx watch server.ts",
+    "lint": "eslint **/*.ts --fix",
     "test": "jest",
     "build": "tsc"
   },
