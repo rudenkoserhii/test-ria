@@ -1,8 +1,9 @@
 import { Context } from 'koa';
-import { Messages } from '../enums';
-import { AutoStats } from '../models';
-import { statsService } from '../services';
-import { ListingStatRequest } from '../types';
+
+import { Messages } from 'enums';
+import { AutoStats } from 'models';
+import { statsService } from 'services';
+import { ListingStatRequest } from 'types';
 
 export const statsController = {
   async getAllViewsById(ctx: Context): Promise<AutoStats | undefined> {

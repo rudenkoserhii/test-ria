@@ -1,1 +1,1 @@
-export { routerStats } from './stats';
+export { routerStats } from 'routes/stats';

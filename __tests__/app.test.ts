@@ -1,7 +1,8 @@
 import request from 'supertest';
-import { app } from '../app';
-import { statsService } from '../services';
-import { Messages } from '../enums';
+
+import { app } from 'app';
+import { Messages } from 'enums';
+import { statsService } from 'services';
 
 describe('Koa Application', () => {
   describe('Error Handling Middleware', () => {

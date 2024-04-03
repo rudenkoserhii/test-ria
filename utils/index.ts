@@ -1,1 +1,1 @@
-export { customLogger } from './custom-logger';
+export { customLogger } from 'utils/custom-logger';

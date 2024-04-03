@@ -1,8 +1,8 @@
 import dotenv from 'dotenv';
 
-import { app } from './app';
-import { Messages } from './enums';
-import { customLogger } from './utils';
+import { app } from 'app';
+import { Messages } from 'enums';
+import { customLogger } from 'utils';
 
 dotenv.config();
 

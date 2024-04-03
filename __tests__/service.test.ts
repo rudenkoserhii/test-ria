@@ -1,4 +1,4 @@
-import { AutoStats } from '../models';
+import { AutoStats } from 'models';
 
 const stats: AutoStats[] = [
   { autoId: '123', listingOpens: 10, phoneOpens: 5 },
