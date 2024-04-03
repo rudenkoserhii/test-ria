@@ -5,9 +5,10 @@
   "main": "server.ts",
   "scripts": {
     "dev": "tsx watch server.ts",
+    "start": "node ./dist/server.js",
     "lint": "eslint **/*.ts --fix",
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc -p ."
   },
   "keywords": [],
   "author": "Rudenko Serhii",
@@ -47,5 +48,12 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1"
     }
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "exec": "ts-node server.ts"
   }
 }
