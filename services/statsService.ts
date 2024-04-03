@@ -13,7 +13,7 @@ export const statsService = {
 
   async getListingViewsById(autoId: string): Promise<AutoStats | undefined> {
     try {
-      const listingOpens = stats.find((s) => s.autoId === autoId).listingOpens;
+      const listingOpens = stats.find((s) => s.autoId === autoId)?.listingOpens;
       return {
         autoId,
         listingOpens,
@@ -25,7 +25,7 @@ export const statsService = {
 
   async getPhoneViewsById(autoId: string): Promise<AutoStats | undefined> {
     try {
-      const phoneOpens = stats.find((s) => s.autoId === autoId).phoneOpens;
+      const phoneOpens = stats.find((s) => s.autoId === autoId)?.phoneOpens;
       return {
         autoId,
         phoneOpens,
@@ -41,7 +41,7 @@ export const statsService = {
       if (!stat) {
         stats.push({ autoId, listingOpens: 1, phoneOpens: 0 });
       } else {
-        stat.listingOpens++;
+        if (stat.listingOpens) stat.listingOpens++;
       }
     } catch (error) {
       throw new Error(error);
@@ -54,7 +54,7 @@ export const statsService = {
       if (!stat) {
         stats.push({ autoId, listingOpens: 0, phoneOpens: 1 });
       } else {
-        stat.phoneOpens++;
+        if (stat.phoneOpens) stat.phoneOpens++;
       }
     } catch (error) {
       throw new Error(error);

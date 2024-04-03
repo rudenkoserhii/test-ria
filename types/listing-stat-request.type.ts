@@ -2,4 +2,4 @@ interface ListingStatRequest {
   autoId: string;
 }
 
-export { ListingStatRequest };
+export { type ListingStatRequest };

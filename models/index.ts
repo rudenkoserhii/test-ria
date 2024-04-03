@@ -1,1 +1,1 @@
-export { AutoStats } from "models/autostats";
+export { type AutoStats } from 'models/autostats';

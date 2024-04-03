@@ -5,7 +5,7 @@ import { statsService } from '../services';
 import { ListingStatRequest } from '../types';
 
 export const statsController = {
-  async getAllViewsById(ctx: Context): Promise<AutoStats> {
+  async getAllViewsById(ctx: Context): Promise<AutoStats | undefined> {
     try {
       const autoId = ctx.params.autoId;
       if (!autoId) {
@@ -26,7 +26,7 @@ export const statsController = {
     }
   },
 
-  async getListingViewsById(ctx: Context): Promise<AutoStats> {
+  async getListingViewsById(ctx: Context): Promise<AutoStats | undefined> {
     try {
       const autoId = ctx.params.autoId;
       if (!autoId) {
@@ -47,7 +47,7 @@ export const statsController = {
     }
   },
 
-  async getPhoneViewsById(ctx: Context): Promise<AutoStats> {
+  async getPhoneViewsById(ctx: Context): Promise<AutoStats | undefined> {
     try {
       const autoId = ctx.params.autoId;
       if (!autoId) {

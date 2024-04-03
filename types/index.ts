@@ -1,1 +1,1 @@
-export { ListingStatRequest } from "types/listing-stat-request.type";
+export { type ListingStatRequest } from 'types/listing-stat-request.type';

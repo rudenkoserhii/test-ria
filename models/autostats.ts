@@ -4,4 +4,4 @@ interface AutoStats {
   phoneOpens?: number;
 }
 
-export { AutoStats };
+export { type AutoStats };
