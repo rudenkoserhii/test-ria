@@ -3,9 +3,9 @@ import bodyParser from 'koa-bodyparser';
 import json from 'koa-json';
 import logger from 'koa-logger';
 
-import { ApiPath } from './enums';
-import { routerStats } from './routes';
-import { customLogger } from './utils';
+import { ApiPath } from 'enums';
+import { routerStats } from 'routes';
+import { customLogger } from 'utils';
 
 const app = new Koa();
 

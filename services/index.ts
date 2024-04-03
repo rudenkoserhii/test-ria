@@ -1,1 +1,1 @@
-export { statsService } from './statsService';
+export { statsService } from 'services/statsService';

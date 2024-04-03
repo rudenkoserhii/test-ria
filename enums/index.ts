@@ -1,2 +1,2 @@
-export { ApiPath } from "./api-path.enum";
-export { Messages } from "./messages.enum";
+export { ApiPath } from 'enums/api-path.enum';
+export { Messages } from 'enums/messages.enum';

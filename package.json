@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Statistics microservice",
   "main": "server.ts",
-  "type": "module",
   "scripts": {
-    "start": "tsx watch server.ts",
-    "lint": "eslint ./**/*.ts --fix",
+    "dev": "tsx watch server.ts",
+    "start": "node ./dist/server.js",
+    "lint": "eslint **/*.ts --fix",
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc -p ."
   },
   "keywords": [],
   "author": "Rudenko Serhii",
@@ -48,5 +48,12 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1"
     }
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "exec": "ts-node server.ts"
   }
 }

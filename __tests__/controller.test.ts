@@ -1,7 +1,8 @@
-import { statsService } from '../services';
-import { statsController } from '../controllers';
 import { Context as KoaContext } from 'koa';
-import { Messages } from '../enums';
+
+import { statsController } from 'controllers';
+import { Messages } from 'enums';
+import { statsService } from 'services';
 
 jest.mock('../services');
 

@@ -1,6 +1,7 @@
 import Router from 'koa-router';
-import { statsController } from '../controllers';
-import { ApiPath } from '../enums';
+
+import { statsController } from 'controllers';
+import { ApiPath } from 'enums';
 
 const routerStats = new Router();
 

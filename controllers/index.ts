@@ -1,1 +1,1 @@
-export { statsController } from './statsController';
+export { statsController } from 'controllers/statsController';
