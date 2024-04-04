@@ -34,7 +34,7 @@ Run the application:
 
 \\Bash `yarn start` for production `yarn dev` for development
 
-This will start the application on port 3000 by default. You can access the API documentation at http://localhost:3000/api-docs (assuming the Swagger UI is integrated).
+This will start the application on port 3000 by default.
 
 ### With Docker
 
@@ -89,10 +89,6 @@ The provided test files demonstrate unit tests written with Jest for different p
 - app.test.ts: Tests error handling middleware.
 - controller.test.ts: Tests the statsController for handling GET requests to /stats/:autoId.
 - service.test.ts: Tests the statsService logic for retrieving statistics.
-
-## Swagger Documentation
-
-The project likely uses Swagger for API documentation generation. The configuration for Swagger located in a separate file swaggerConfig.js.
 
 ## Messages (enums/Messages.ts)
 

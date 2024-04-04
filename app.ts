@@ -4,8 +4,7 @@ import json from 'koa-json';
 import logger from 'koa-logger';
 
 import { ApiPath } from 'enums';
-// import { routerStats, routerSwagger } from 'routes';
-import { routerStats, routerSwagger, swaggerSpec, swaggerUi } from 'routes';
+import { routerStats } from 'routes';
 import { customLogger } from 'utils';
 
 const app = new Koa();
@@ -25,11 +24,6 @@ app.use(async (ctx, next) => {
     ctx.body = error.message;
   }
 });
-
-// app.use(routerSwagger.routes());
-
-routerSwagger.prefix(ApiPath.swagger);
-app.use(swaggerUi.serve).use(swaggerUi.setup(swaggerSpec));
 
 routerStats.prefix(ApiPath.stats);
 app.use(routerStats.routes()).use(routerStats.allowedMethods());
