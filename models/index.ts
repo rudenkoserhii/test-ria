@@ -1,1 +1,5 @@
-export { type AutoStats } from 'models/autostats';
+export {
+  type AutoStats,
+  type AutoStatsListing,
+  type AutoStatsPhone,
+} from 'models/autostats';

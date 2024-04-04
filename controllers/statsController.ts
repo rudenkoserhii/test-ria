@@ -1,7 +1,7 @@
 import { Context } from 'koa';
 
 import { Messages } from 'enums';
-import { AutoStats } from 'models';
+import { AutoStats, AutoStatsListing, AutoStatsPhone } from 'models';
 import { statsService } from 'services';
 import { ListingStatRequest } from 'types';
 
@@ -27,7 +27,7 @@ export const statsController = {
     }
   },
 
-  async getListingViewsById(ctx: Context): Promise<AutoStats | undefined> {
+  async getListingViewsById(ctx: Context): Promise<AutoStatsListing | undefined> {
     try {
       const autoId = ctx.params.autoId;
       if (!autoId) {
@@ -48,7 +48,7 @@ export const statsController = {
     }
   },
 
-  async getPhoneViewsById(ctx: Context): Promise<AutoStats | undefined> {
+  async getPhoneViewsById(ctx: Context): Promise<AutoStatsPhone | undefined> {
     try {
       const autoId = ctx.params.autoId;
       if (!autoId) {

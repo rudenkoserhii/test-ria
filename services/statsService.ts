@@ -1,4 +1,4 @@
-import { AutoStats } from 'models';
+import { AutoStats, AutoStatsListing, AutoStatsPhone } from 'models';
 
 const stats: AutoStats[] = [];
 
@@ -11,9 +11,11 @@ export const statsService = {
     }
   },
 
-  async getListingViewsById(autoId: string): Promise<AutoStats | undefined> {
+  async getListingViewsById(
+    autoId: string,
+  ): Promise<AutoStatsListing | undefined> {
     try {
-      const listingOpens = stats.find((s) => s.autoId === autoId)?.listingOpens;
+      const listingOpens = stats.find((s) => s.autoId === autoId)!.listingOpens;
       return {
         autoId,
         listingOpens,
@@ -23,9 +25,10 @@ export const statsService = {
     }
   },
 
-  async getPhoneViewsById(autoId: string): Promise<AutoStats | undefined> {
+  async getPhoneViewsById(autoId: string): Promise<AutoStatsPhone | undefined> {
     try {
-      const phoneOpens = stats.find((s) => s.autoId === autoId)?.phoneOpens;
+      const phoneOpens = stats.find((s) => s.autoId === autoId)!.phoneOpens;
+
       return {
         autoId,
         phoneOpens,
@@ -41,7 +44,7 @@ export const statsService = {
       if (!stat) {
         stats.push({ autoId, listingOpens: 1, phoneOpens: 0 });
       } else {
-        if (stat.listingOpens) stat.listingOpens++;
+        stat.listingOpens++;
       }
     } catch (error) {
       throw new Error(error);
@@ -54,7 +57,7 @@ export const statsService = {
       if (!stat) {
         stats.push({ autoId, listingOpens: 0, phoneOpens: 1 });
       } else {
-        if (stat.phoneOpens) stat.phoneOpens++;
+        stat.phoneOpens++;
       }
     } catch (error) {
       throw new Error(error);
