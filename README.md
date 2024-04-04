@@ -2,6 +2,42 @@
 
 ## Запуск (Running the Service)
 
+Prerequisites:
+
+Node.js and npm (or yarn) installed on your system. You can verify their installation by running `node -v` and `npm -v` (or `yarn -v`) in your terminal.
+
+Steps:
+
+Clone the repository:
+
+\\Bash `git clone https://github.com/rudenkoserhii/test-ria.git`
+
+Navigate to the project directory:
+
+\\Bash `cd test-ria`
+
+### Without Docker
+
+Install dependencies:
+
+\\Bash `npm install`
+
+(or)
+
+\\Bash `yarn install`
+
+Run the application:
+
+\\Bash `npm start` for production `npm dev` for development
+
+(or)
+
+\\Bash `yarn start` for production `yarn dev` for development
+
+This will start the application on port 3000 by default. You can access the API documentation at http://localhost:3000/api-docs (assuming the Swagger UI is integrated).
+
+### With Docker
+
 \\Bash `docker build -t test-ria .` `docker run -p 3000:3000 test-ria`
 
 ## API
