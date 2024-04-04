@@ -5,6 +5,7 @@ const ApiPath = {
   statsGetPhoneViewsById: '/:autoId/phone',
   statsAddPhoneView: '/phone',
   statsAddListingView: '/listing',
+  swagger: '/api-docs',
 };
 
 export { ApiPath };
